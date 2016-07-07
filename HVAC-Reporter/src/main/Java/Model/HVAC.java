@@ -1,7 +1,7 @@
 package Model;
 
 /**
- * Created by iam on 7/2/16.
+ * Created by sanjeev budha on 7/7/16.
  */
 public class HVAC {
 

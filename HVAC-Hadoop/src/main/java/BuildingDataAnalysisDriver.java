@@ -11,9 +11,9 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import java.io.IOException;
 
 /**
- * Created by who-are-you on 6/2/16.
+ * Created by sanjeev budha on 6/7/16.
  */
-public class DataAnalysisDriver {
+public class BuildingDataAnalysisDriver {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
         String inputFile = "input/firstResult.csv";
@@ -21,8 +21,8 @@ public class DataAnalysisDriver {
         Job analysisJob = Job.getInstance(configuration);
 
 
-        FileInputFormat.setInputPaths(analysisJob,inputFile);
-        FileOutputFormat.setOutputPath(analysisJob,new Path("secondResult.csv"));
+        FileInputFormat.setInputPaths(analysisJob, inputFile);
+        FileOutputFormat.setOutputPath(analysisJob, new Path("secondResult.csv"));
 
 
         analysisJob.setInputFormatClass(TextInputFormat.class);
@@ -32,10 +32,10 @@ public class DataAnalysisDriver {
         analysisJob.setOutputKeyClass(IntWritable.class);
         analysisJob.setOutputValueClass(Text.class);
 
-        analysisJob.setMapperClass(AnalysisMapper.class);
-        analysisJob.setReducerClass(AnalysisReducer.class);
+        analysisJob.setMapperClass(BuildingDataMapper.class);
+        analysisJob.setReducerClass(BuildingDataReducer.class);
 
-        analysisJob.setJarByClass(DataAnalysisDriver.class);
+        analysisJob.setJarByClass(BuildingDataAnalysisDriver.class);
         analysisJob.setJobName("First Written Job");
 
         analysisJob.waitForCompletion(true);

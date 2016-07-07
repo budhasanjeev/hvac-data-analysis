@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * Created by iam on 7/2/16.
+ * Created by sanjeev budha on 7/7/16.
  */
 public class FetchService {
 
@@ -34,7 +34,7 @@ public class FetchService {
 
             BufferedWriter writer = null;
             if(fetcher instanceof RemoteFile) {
-                File f = new File("/home/iam/IdeaProjects/HVAC-Full-System/HVAC-Reporter/data/secondResult.csv");
+                File f = new File("/home/sanjeevbudha/HVACDataAnalysis/HVAC-Reporter/data/secondResult.csv");
                 f.deleteOnExit();
                 writer = new BufferedWriter(new FileWriter(f));
             }
@@ -75,7 +75,7 @@ public class FetchService {
             int first = 0;
             BufferedWriter writer = null;
             if(fetcher instanceof RemoteFile) {
-                File f = new File("/home/iam/IdeaProjects/HVAC-Full-System/HVAC-Reporter/data/firstResult.csv");
+                File f = new File("/home/sanjeevbudha/HVACDataAnalysis/HVAC-Reporter/data/firstResult.csv");
                 f.deleteOnExit();
                 writer = new BufferedWriter(new FileWriter(f));
             }

@@ -5,7 +5,7 @@ import org.apache.hadoop.fs.Path;
 import java.io.File;
 
 /**
- * Created by iam on 7/2/16.
+ * Created by sanjeev budha on 7/7/16.
  */
 
 public class RemoteFile extends AbstractFileFetcher {
@@ -16,9 +16,9 @@ public class RemoteFile extends AbstractFileFetcher {
     public File getFile(String classifier) {
         Path filePath = null;
         if(classifier.equalsIgnoreCase("drill")){
-            filePath = new Path("hdfs://localhost:9000/user/iam/input/firstResult.csv");
+            filePath = new Path("hdfs://localhost:9000/user/sanjeev/input/firstResult.csv");
         }else{
-            filePath = new Path("hdfs://localhost:9000/user/iam/secondResult.csv/part-r-00000");
+            filePath = new Path("hdfs://localhost:9000/user/sanjeev/secondResult.csv/part-r-00000");
         }
         setRemotePath(filePath);
         return inputFile;

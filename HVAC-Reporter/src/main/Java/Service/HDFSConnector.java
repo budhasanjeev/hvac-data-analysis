@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.logging.Logger;
 
 /**
- * Created by iam on 7/2/16.
+ * Created by sanjeev budha on 7/7/16.
  */
 
 public class HDFSConnector {
@@ -28,7 +28,7 @@ public class HDFSConnector {
         FileSystem fs = null;
         try {
             fs = FileSystem.get(configuration);
-            Path filePath = new Path("hdfs://localhost:9000/user/iam/input/firstResult.csv");
+            Path filePath = new Path("hdfs://localhost:9000/user/sanjeev/input/firstResult.csv");
             BufferedReader reader = new BufferedReader(new InputStreamReader(fs.open(filePath)));
             if(reader.ready()){
                 logger.info("Successfully Connected: "+remoteUrl);

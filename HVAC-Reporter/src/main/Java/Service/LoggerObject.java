@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 /**
- * Created by iam on 7/3/16.
+ * Created by sanjeev budha on 7/7/16.
  */
 public class LoggerObject {
     static Logger logger = null;
@@ -18,7 +18,7 @@ public class LoggerObject {
         if(logger==null) {
             logger = Logger.getLogger("HVAC-Reporter-Log");Logger.getLogger("HVAC-Reporter-Log");
             try {
-                fh = new FileHandler("/home/iam/IdeaProjects/HVAC-Full-System/HVAC-Reporter/log/systemLog.log");
+                fh = new FileHandler("/home/sanjeevbudha/HVACDataAnalysis/HVAC-Reporter/log/systemLog.log");
             } catch (IOException e) {
                 e.printStackTrace();
             }

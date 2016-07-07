@@ -10,9 +10,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by who-are-you on 6/2/16.
+ * Created by sanjeev budha on 6/7/16.
  */
-public class AnalysisMapper extends Mapper<LongWritable,Text,IntWritable,Text>{
+public class BuildingDataMapper extends Mapper<LongWritable,Text,IntWritable,Text> {
 
     private Splitter splitter;
     private Joiner joiner;
